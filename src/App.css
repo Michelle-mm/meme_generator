@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --BGcolor: #5be4bb;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header{
+  width: 100%;
+  min-width: 550px;
+  background-color: var(--BGcolor);
   color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 1rem 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+
+.settingBtn, .settingBarCloseBtn{
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 2rem;
+    color: white;
+} 
+  .settingBtn:hover{
+    box-shadow: inset 1px 2px 2px rgb(73, 73, 73), inset -0.5px -0.5px 2px rgb(73, 73, 73);
+    border-radius: 50%;
+  } 
+
+.settingBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.466);
+  backdrop-filter: blur(8px);
+  width: 27%;
+  height: 100%;
+  padding: 1rem;
+  z-index: 3;
+} .settingHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  .settingHeader h2, .settingHeader h3{
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+
+  .closeBtn:hover{
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 50%;
+  }
+
+.colorPicker, .memeTextColorPicker{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}   
+    .colorPicker label, .memeTextColorPicker label{
+      color: var(--BGcolor);
+  }  .colorPicker input, .memeTextColorPicker input{
+    border: none;
+  }
+
+.MemeGenerator{
+  width: 95%;
+  min-width: 450px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+.editBox{
+  width: 90%;
+}
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputs label{
+  display: flex;
+  flex-direction: column; 
+  width: 45%;
+  gap:5px;
+  font-weight: 600;
+  color: var(--BGcolor);
+}
+
+.inputs input{
+  height: 2rem;
+  border: 1px solid var(--BGcolor);
+  border-radius: 5px;
+}
+
+.getNewMemeBtn{
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  background-color: var(--BGcolor);
+  padding: 0.6rem;
+  width: 100%;
+} .getNewMemeBtn:hover{
+  box-shadow: inset 1px 1px 2px rgb(151, 151, 151), inset -1px -1px 2px rgb(151, 151, 151);
+}
+
+.memeImgBox{
+  width: 90%;
+  height: 60%;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.memeImgBox img{
+  width: 90%;
+  max-width: 500px;
+}
+.memeImgBox p{
+  color: aliceblue;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.memeText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  gap: 155px;
+  top: 7px;
+
+}
+
+button.downloadBtn{
+  width: 60%;
+  max-width: 400px;
+  border: none;
+  padding: 0.5rem;
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 8px;
+}
+
+footer{
+  width: 100%;
+  background-color: var(--BGcolor);
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  padding: 1rem;
+  margin-top: 1.5rem;
 }
