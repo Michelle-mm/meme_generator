@@ -1,5 +1,11 @@
 # Getting Started with Create React App
 
+![memeGenerator](https://github.com/Michelle-mm/meme_generator/assets/79055740/7d325018-686e-4529-8479-26ca17e656b4)
+
+
+
+![memeGeneratorSidebar](https://github.com/Michelle-mm/meme_generator/assets/79055740/76efd6f3-0ba3-4fce-812b-6908abc4c226)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
